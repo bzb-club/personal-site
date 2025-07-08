@@ -1,0 +1,272 @@
+html {
+    font-size: 14pt;
+}
+
+body {
+    margin:0;
+    font-family: "Instrument Sans", sans-serif;
+    background-color: #E7F2E4;
+    background-image: url("./assets/Pattern-square.png") ;
+    background-attachment: fixed;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
+    height:98vh;
+    width:98vw;
+    gap:1rem;
+    padding:1vh;
+}
+
+body > * {
+    border-radius: 12px;
+    padding: 30px;
+}
+
+header {
+    background-color: #732255;
+    color: #F4F1EC;
+    grid-area: 1 / 1 / -1 / 2;
+    padding-top:0;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header img {
+    width:300px;
+    position: absolute;
+    right:40px;
+    bottom:40px;
+}
+
+#skills {
+    background-color: #4477F9 ;
+    color: #F4F1EC;
+    grid-area: 1 / 2 / 3 / 3;
+    padding: 30px 50px;
+}
+
+#info-extra {
+    background-color: #C2A5F5;
+    color: #2C2B2B;
+}
+
+#contact {
+    padding:5px;
+}
+
+#contact, button {
+    background-color: #E55050;
+    color: #F9EB82;
+}
+
+#projects {
+    background-color: #B2C6D5;
+    color: #2C2B2B;
+    grid-column: span 2;
+}
+
+h1 {
+   font-family: "Instrument Serif", serif; 
+   font-weight: 100;
+   line-height: 4rem;
+   font-size: 4rem;
+}
+
+h2, h3 {
+    line-height: 0;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ol {
+    list-style:circle;
+    padding-left: 20px;
+}
+
+ol li {
+    font-size: 1.5rem;
+    padding-top: 30px
+}
+
+button {
+    border:none;
+    font-family: "Instrument Serif", serif; 
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    column-gap:15px;
+    border-radius: 12px;
+    padding: 20px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #F9EB82;
+    font-size: 3rem;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;  
+}
+
+#projects img {
+    width:100%;
+    border-radius: 12px;
+    
+}
+
+.full-progress, .progress-bar {
+    background-color: #2551BF;
+    height: 12px;
+    border-radius: 100px;
+}
+
+.progress-bar {
+    background-color: #F4F1EC; ;
+}
+
+#pt {
+    width:99%;
+}
+
+#en, #fg, #wp {
+    width: 60%;
+}
+
+#fr, #cc {
+    width:79%;
+}
+
+button:hover {
+    background-color: #f561d0;
+}
+
+@media (min-width:768px) and (max-width:1149px) {
+
+     body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap:0.5rem;
+        height:96vh;
+        width:96vw;
+    }
+
+    header {
+        grid-area: 1 / 1 / 2 / -1;
+        display:block;
+    }
+
+    #skills {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    header img {
+        width:200px;
+        position: absolute;
+        right:40px;
+        bottom:40px;
+    }
+
+    header p {
+        width:70%;
+        margin:0;
+    }
+
+    #skills {
+    color: #F4F1EC;
+    padding: 10px 30px;
+    }
+
+    ol li {
+    font-size: 1rem;
+    padding-top: 5px;
+    }
+
+    h2 {
+        line-height: 0;
+    }
+
+    ul li p {
+        margin:0;
+        margin-top: 14px;
+        font-size: 0.8rem;
+    }
+
+    .full-progress, .progress-bar {
+    height: 8px;
+}
+
+}
+
+@media (max-width:767px) {
+
+    
+    body {
+        display:block;
+        height:auto;
+        width:96vw;
+        padding-bottom: 100px; 
+    }
+
+    body > * {
+        margin-bottom:10px;
+    }
+
+    header {
+        min-height:90vh;
+        padding-bottom:110px;
+    }
+
+    h2, h3 {
+    line-height: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+    header img {
+        width:100px;
+        position: absolute;
+        right:20px;
+        bottom:20px;
+    }
+
+    #contact {
+        position: fixed;
+        display: inline-block;
+        bottom:5px;
+        left: 25%;
+        z-index:2;
+        width:50%;
+        box-shadow: 0px 0px 15px;
+    }
+
+    #projects {
+        padding-top:20px;
+    }
+
+    .container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;  
+    }
+
+    a {
+    font-size: 1.2rem;
+    }
+
+}
+
